@@ -156,13 +156,13 @@ def button_callback(channel):
     print(f'\t{med_name} : {pills_count}')
 
     if med_name == 'Polopiryna':
-      led_blink(cfg.PINS['MedLedYellow'], pills_count)
-    elif med_name == 'Witaminki':
       led_blink(cfg.PINS['MedLedBlue'], pills_count)
-    elif med_name == 'Strepsilsik':
+    elif med_name == 'Witaminka C':
       led_blink(cfg.PINS['MedLedGreen'], pills_count)
-    elif med_name == 'Apap':
+    elif med_name == 'Strepsilsik':
       led_blink(cfg.PINS['MedLedRed'], pills_count)
+    elif med_name == 'Witaminka B':
+      led_blink(cfg.PINS['MedLedYellow'], pills_count)
 
     caretaker_phone_number = get_user_phone_numbers_by_uuid(dosage['caretaker_uuid'])
     pupil_login = get_user_login_by_uuid(dosage['pupil_uuid'])
